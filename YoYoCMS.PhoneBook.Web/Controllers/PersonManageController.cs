@@ -26,7 +26,8 @@ namespace YoYoCMS.PhoneBook.Web.Controllers
         {
 
             var output = await _personAppService.GetPagedPersonsAsync(input);
-
+            ViewBag.currentPage = input.SkipCount;
+            ViewBag.totalPages = output.TotalCount;
             return View(output);
         }
     }

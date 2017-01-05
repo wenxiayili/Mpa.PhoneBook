@@ -48,8 +48,9 @@ namespace YoYoCMS.PhoneBook.EntityFramework
         
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
-            modelBuilder.Configurations.Add(new PersonCfg());
             base.OnModelCreating(modelBuilder);
+
+            modelBuilder.Configurations.Add(new PersonCfg());
          }
     }
 }

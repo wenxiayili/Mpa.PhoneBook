@@ -7,6 +7,7 @@
 }
 
 @section scripts{
+    @Html.IncludeScript("~/Scripts/bootstrap-paginator.js")
     @Html.IncludeScript("~/Views/PersonManage/Index.js")
 
 
@@ -48,14 +49,28 @@
                             </tr>
                         }
                     </tr>
+                    
                 }
                 </tbody>
             </table>
 
-
+            
         </div>
 
-
+        <!--分页-->
+        <nav>
+            <ul class="pagination">
+                @*<li><a href="#">&laquo;</a></li>
+                <li><a href="#">1</a></li>
+                <li><a href="#">2</a></li>
+                <li><a href="#">3</a></li>
+                <li><a href="#">4</a></li>
+                <li><a href="#">5</a></li>
+                <li><a href="#">&raquo;</a></li>*@
+            </ul>
+        </nav>
+        <input type="hidden" name="currentPage" value="@ViewBag.currentPage" />
+        <input type="hidden" name="totalPages"  value="@ViewBag.totalPages"/>
     </div>
 
 
